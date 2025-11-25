@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Ignore everything in this directory
+*
+# Keep this .gitignore file tracked
+!.gitignore
