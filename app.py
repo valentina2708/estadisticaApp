@@ -5,7 +5,11 @@ import math
 import time
 import matplotlib.pyplot as plt
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="estadApp",
+    page_icon="📊",
+    layout="wide"
+)
 st.title("Aplicación de Estadística – Análisis de Velocidad de Internet")
 
 st.write("Sube el archivo CSV del dataset del MinTIC (n48w-gutb):")
@@ -65,7 +69,7 @@ if archivo:
                 st.session_state["muestra"] = muestra
                 st.success("Muestra generada correctamente.")
     with col2:
-        st.write("Si quieres regenerar la muestra pulsa el botón de la izquierda (cada vez será distinta).")
+        st.write("Para regenerar la muestra pulsar el botón de la izquierda (cada vez será distinta).")
 
 # ---------------------------
 # SI HAY MUESTRA: cálculos
@@ -127,7 +131,7 @@ if "muestra" in st.session_state:
             last_li, last_ls = intervalos[-1]
             intervalos[-1] = (last_li, round(maximo, 2))
 
-        st.write("**Intervalos construidos (según la muestra y tu regla):**")
+        st.write("**Intervalos construidos (según la muestra y la regla seleccionada):**")
         for idx, (a, b) in enumerate(intervalos, start=1):
             st.write(f"Clase {idx}: {a}  –  {b}")
 
